@@ -450,11 +450,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Colin Steffen\\source\\repos\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform.csproj",
+      "projectUniqueName": "C:\\Dev\\ba-xamarin-android\\benchmark_database\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform.csproj",
       "projectName": "benchmark_database_xamarin.platform",
-      "projectPath": "C:\\Users\\Colin Steffen\\source\\repos\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform.csproj",
+      "projectPath": "C:\\Dev\\ba-xamarin-android\\benchmark_database\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform.csproj",
       "packagesPath": "C:\\Users\\Colin Steffen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Colin Steffen\\source\\repos\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\obj\\",
+      "outputPath": "C:\\Dev\\ba-xamarin-android\\benchmark_database\\benchmark_database_xamarin.platform\\benchmark_database_xamarin.platform\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
