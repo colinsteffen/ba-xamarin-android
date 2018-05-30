@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">benchmark_hello_world_xamarin.android</string>
+    <string name="action_settings">Settings</string>
+</resources>
