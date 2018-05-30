@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">benchmark_database_xamarin.platform</string>
+    <string name="action_settings">Settings</string>
+</resources>
