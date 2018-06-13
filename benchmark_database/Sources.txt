@@ -1,0 +1,3 @@
+Xamarin.Forms:
+-Datenbankerstellung mit dem NuGet Package sqlite-net-pcl
+-Was geht nicht plattformspezifisch? -> Dateipfad für die Datenbank holen
