@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:bm_db_xam_forms"
+             x:Class="bm_db_xam_forms.MainPage">
+
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center">
+
+        <Button Text="Insert"
+                Clicked="OnInsertClicked"
+                WidthRequest="200"
+                HeightRequest="50"/>
+
+        <Button Text="Reset"
+                Clicked="OnResetClicked"
+                WidthRequest="200"
+                HeightRequest="50"/>
+
+        <Button Text="Load"
+                Clicked="OnLoadClicked"
+                WidthRequest="200"
+                HeightRequest="50"/>
+
+    </StackLayout>
+
+</ContentPage>

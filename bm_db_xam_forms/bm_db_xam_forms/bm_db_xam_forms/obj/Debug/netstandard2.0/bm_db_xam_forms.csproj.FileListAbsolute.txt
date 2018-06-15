@@ -1,0 +1,9 @@
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\bin\Debug\netstandard2.0\bm_db_xam_forms.deps.json
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\bin\Debug\netstandard2.0\bm_db_xam_forms.dll
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.csprojAssemblyReference.cache
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.csproj.CoreCompileInputs.cache
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.AssemblyInfoInputs.cache
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.AssemblyInfo.cs
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\bin\Debug\netstandard2.0\bm_db_xam_forms.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.dll
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms\obj\Debug\netstandard2.0\bm_db_xam_forms.pdb
