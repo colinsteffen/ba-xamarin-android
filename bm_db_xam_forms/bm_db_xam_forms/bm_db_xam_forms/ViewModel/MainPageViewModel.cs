@@ -29,6 +29,7 @@ namespace bm_db_xam_forms.ViewModel
 
             timer.Stop();
             Debug.WriteLine("LoadTime: " + timer.Elapsed);
+            Debug.WriteLine("Datensatz:" + DataList.Count);
         }
 
         public void ResetList()
