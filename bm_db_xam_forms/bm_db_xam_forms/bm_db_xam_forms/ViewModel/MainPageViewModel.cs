@@ -1,20 +1,25 @@
-﻿using bm_db_xam_forms.Model;
+﻿using bm_db_xam_forms.Database;
+using bm_db_xam_forms.Helper;
+using bm_db_xam_forms.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using Xamarin.Forms;
 
 namespace bm_db_xam_forms.ViewModel
 {
     public class MainPageViewModel
     {
+        private DataDatabase database;
         List<Data> DataList;
 
         public MainPageViewModel()
         {
             DataList = new List<Data>();
+            database = new DataDatabase(DependencyService.Get<IPathHelper>().GetLocalPath("db_xam_forms"));
 
-            for (int i = 0; i >= 10000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 DataList.Add(new Data());
             }
@@ -25,7 +30,7 @@ namespace bm_db_xam_forms.ViewModel
             var timer = new Stopwatch();
             timer.Start();
 
-            DataList = await App.Database.GetItemsAsync();
+            DataList = await database.GetItemsAsync();
 
             timer.Stop();
             Debug.WriteLine("LoadTime: " + timer.Elapsed);
@@ -44,7 +49,7 @@ namespace bm_db_xam_forms.ViewModel
 
             foreach (Data d in DataList)
             {
-                await App.Database.SaveItemAsync(d);
+                await database.SaveItemAsync(d);
             }
 
             timer.Stop();

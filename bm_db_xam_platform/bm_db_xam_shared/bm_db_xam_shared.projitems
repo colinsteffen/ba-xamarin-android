@@ -9,5 +9,8 @@
     <Import_RootNamespace>bm_db_xam_shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DataDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controller\MainActivityController.cs" />
   </ItemGroup>
 </Project>

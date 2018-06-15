@@ -16,20 +16,6 @@ namespace bm_db_xam_forms
 			MainPage = new MainPage();
 		}
 
-        static DataDatabase database;
-
-        public static DataDatabase Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new DataDatabase(DependencyService.Get<IPathHelper>().GetLocalPath("db_xam_forms"));
-                }
-                return database;
-            }
-        }
-
         protected override void OnStart ()
 		{
 			// Handle when your app starts
