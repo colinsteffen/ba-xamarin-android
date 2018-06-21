@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import steffen.de.bm_db_android.Controller.MainActivityController
 import steffen.de.bm_db_android.R
+import kotlin.coroutines.experimental.CoroutineContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,8 +16,9 @@ class MainActivity : AppCompatActivity() {
         val btnInsert = findViewById<Button>(R.id.btn_insert)
         val btnReset = findViewById<Button>(R.id.btn_reset)
         val btnLoad = findViewById<Button>(R.id.btn_load)
+        val btnDelete = findViewById<Button>(R.id.btn_delete)
 
-        val controller = MainActivityController(this.application)
+        val controller = MainActivityController(this.getApplication())
 
         btnInsert.setOnClickListener{
             controller.insertData()
@@ -28,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         btnLoad.setOnClickListener{
             controller.loadData()
+        }
+
+        btnDelete.setOnClickListener{
+            controller.deleteData()
         }
 
     }

@@ -1,19 +1,14 @@
 package steffen.de.bm_db_android.Controller
 
-import android.app.Application
-import kotlinx.coroutines.experimental.awaitAll
 import kotlinx.coroutines.experimental.launch
 import kotlinx.coroutines.experimental.runBlocking
 import steffen.de.bm_db_android.Database.DataDatabase
 import steffen.de.bm_db_android.Model.Data
-import java.util.*
-import kotlin.concurrent.thread
 import kotlin.system.measureTimeMillis
 
-class MainActivityController(application: Application){
+class MainActivityController(context: Context, private var database: DataDatabase = DataDatabase.getDatabase(context)){
 
     private var dataList: MutableList<Data>? = mutableListOf<Data>()
-    private val database = DataDatabase.getDatabase(application)
 
     init {
         for(i in 1..1000){
@@ -35,7 +30,7 @@ class MainActivityController(application: Application){
     }
 
     fun resetList(){
-        dataList = null;
+        dataList = null
     }
 
     fun insertData() = runBlocking{
@@ -49,6 +44,22 @@ class MainActivityController(application: Application){
         }
 
         println("InsertTime: " + timer)
+    }
+
+    fun deleteData() = runBlocking{
+        val job = launch {
+            for(d in database.dataDao().all){
+                database.dataDao().delete(d)
+            }
+        }
+        job.join()
+
+        dataList!!.clear()
+        for(i in 1..1000){
+            dataList!!.add(Data())
+        }
+
+        println("Delete erfolgreich.")
     }
 
 }

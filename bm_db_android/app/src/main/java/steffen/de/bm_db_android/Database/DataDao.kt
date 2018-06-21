@@ -1,0 +1,20 @@
+package steffen.de.bm_db_android.Database
+
+import android.arch.persistence.room.Dao
+import android.arch.persistence.room.Delete
+import android.arch.persistence.room.Insert
+import android.arch.persistence.room.Query
+import steffen.de.bm_db_android.Model.Data
+
+@Dao
+interface DataDao {
+
+    @get:Query("SELECT * FROM data")
+    val all: MutableList<Data>
+
+    @Insert
+    fun insert(data: Data)
+
+    @Delete
+    fun delete(data: Data)
+}
