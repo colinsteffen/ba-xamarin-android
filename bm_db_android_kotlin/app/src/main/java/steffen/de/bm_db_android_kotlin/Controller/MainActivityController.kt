@@ -64,8 +64,6 @@ class MainActivityController(application: Application, private var database: Dat
             dataList!!.add(Data())
         }
 
-
         println("Delete erfolgreich.")
     }
-
 }
