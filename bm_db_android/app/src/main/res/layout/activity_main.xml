@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <Button
             android:id="@+id/btn_insert"
@@ -29,5 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="load"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
