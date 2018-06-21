@@ -1,6 +1,8 @@
 package steffen.de.bm_db_android_kotlin.Controller
 
 import android.app.Application
+import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.experimental.runBlocking
 import steffen.de.bm_db_android_kotlin.Model.Data
 import steffen.de.bm_db_android_kotlin.Database.DataDatabase
 import kotlin.system.measureTimeMillis
@@ -46,17 +48,22 @@ class MainActivityController(application: Application, private var database: Dat
     }
 
     fun deleteData() = runBlocking{
-        val job = launch {
-            for(d in database.dataDao().all){
-                database.dataDao().delete(d)
+        val timer = measureTimeMillis {
+            val job = launch {
+                for (d in database.dataDao().all) {
+                    database.dataDao().delete(d)
+                }
             }
+            job.join()
         }
-        job.join()
+
+        println("DeleteTime: ")
 
         dataList!!.clear()
         for(i in 1..1000){
             dataList!!.add(Data())
         }
+
 
         println("Delete erfolgreich.")
     }
