@@ -29,7 +29,7 @@ namespace bm_db_xam_shared.Controller
             var timer = new Stopwatch();
             timer.Start();
 
-            DataList = await database.GetItemsAsync(); ;
+            DataList = await database.GetItemsAsync();
 
             timer.Stop();
             Debug.WriteLine("LoadTime: " + timer.Elapsed);
