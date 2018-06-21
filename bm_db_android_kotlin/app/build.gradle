@@ -2,10 +2,14 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "steffen.de.bm_db_android"
+        applicationId "steffen.de.bm_db_android_kotlin"
         minSdkVersion 23
         targetSdkVersion 27
         versionCode 1
@@ -28,16 +32,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.23.3'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     //Room
-
-    def room_version = "1.1.1"
-
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
-
-    // Test helpers
-    testImplementation "android.arch.persistence.room:testing:$room_version"
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
 }
