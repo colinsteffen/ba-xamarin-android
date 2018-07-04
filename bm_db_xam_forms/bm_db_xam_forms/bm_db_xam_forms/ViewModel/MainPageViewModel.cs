@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace bm_db_xam_forms.ViewModel
@@ -42,18 +43,17 @@ namespace bm_db_xam_forms.ViewModel
             DataList = null;
         }
 
-        public async void InsertData()
+        public void InsertData()
         {
             var timer = new Stopwatch();
             timer.Start();
 
-            foreach (Data d in DataList)
-            {
-                await database.SaveItemAsync(d);
-            }
+            database.SaveItems(DataList);
 
             timer.Stop();
             Debug.WriteLine("InsertTime: " + timer.Elapsed);
+
+            Debug.WriteLine("InsertTime: " + database.GetItemsAsync().Result.Count);
         }
 
     }

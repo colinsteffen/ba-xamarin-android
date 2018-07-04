@@ -16,7 +16,7 @@ public interface DataDao {
     List<Data> getAll();
 
     @Insert
-    void insert(Data data);
+    void insert(List<Data> dataList);
 
     @Delete
     void delete(Data data);

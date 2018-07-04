@@ -30,6 +30,7 @@ public class MainActivityController {
 
         long endTime = System.nanoTime();
         System.out.println("LoadTime:" + ((endTime - startTime) / 1000000));
+        System.out.println("LoadTime: Count -> " + dataList.size());
     }
 
     public void resetList(){
@@ -39,12 +40,12 @@ public class MainActivityController {
     public void insertData(){
         long startTime = System.nanoTime();
 
-        for(Data d: dataList){
-            database.dataDao().insert(d);
-        }
+        database.dataDao().insert(dataList);
 
         long endTime = System.nanoTime();
         System.out.println("LoadTime:" + ((endTime - startTime) / 1000000));
+
+        System.out.println("LoadTime: Inserted -> " + database.dataDao().getAll().size());
     }
 
     public void deleteData(){
