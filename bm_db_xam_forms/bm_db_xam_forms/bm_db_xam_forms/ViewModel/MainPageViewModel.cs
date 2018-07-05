@@ -20,10 +20,7 @@ namespace bm_db_xam_forms.ViewModel
             DataList = new List<Data>();
             database = new DataDatabase(DependencyService.Get<IPathHelper>().GetLocalPath("db_xam_forms"));
 
-            for (int i = 0; i < 1000; i++)
-            {
-                DataList.Add(new Data());
-            }
+            AddDataToList();
         }
 
         public async void LoadData()
@@ -34,8 +31,8 @@ namespace bm_db_xam_forms.ViewModel
             DataList = await database.GetItemsAsync();
 
             timer.Stop();
-            Debug.WriteLine("LoadTime: " + timer.Elapsed);
-            Debug.WriteLine("Datensatz:" + DataList.Count);
+            Debug.WriteLine("Time: Load -> " + timer.Elapsed);
+            Debug.WriteLine("Time: Load -> " + DataList.Count);
         }
 
         public void ResetList()
@@ -51,9 +48,31 @@ namespace bm_db_xam_forms.ViewModel
             database.SaveItems(DataList);
 
             timer.Stop();
-            Debug.WriteLine("InsertTime: " + timer.Elapsed);
+            Debug.WriteLine("Time: Insert -> " + timer.Elapsed);
+            Debug.WriteLine("Time: Insert -> " + database.GetItemsAsync().Result.Count);
+        }
 
-            Debug.WriteLine("InsertTime: " + database.GetItemsAsync().Result.Count);
+        public void DeleteData()
+        {
+            var timer = new Stopwatch();
+            timer.Start();
+
+            database.DeleteItems(DataList);
+
+            timer.Stop();
+            Debug.WriteLine("Time: Insert -> " + timer.Elapsed);
+            Debug.WriteLine("Time: Insert -> " + database.GetItemsAsync().Result.Count);
+
+            DataList.Clear();
+            AddDataToList();
+        }
+
+        void AddDataToList()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                DataList.Add(new Data());
+            }
         }
 
     }

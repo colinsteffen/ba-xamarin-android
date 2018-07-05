@@ -22,5 +22,7 @@ namespace bm_db_xam_forms
         void OnResetClicked(object sender, EventArgs e) => MainPageVM.ResetList();
 
         void OnLoadClicked(object sender, EventArgs e) => MainPageVM.LoadData();
+
+        void OnDeleteClicked(object sender, EventArgs e) => MainPageVM.DeleteData();
     }
 }

@@ -22,6 +22,12 @@ namespace bm_db_xam_forms.Database
             database.InsertAllAsync(dataList).Wait();
         }
 
+        public void DeleteItems(List<Data> dataList)
+        {
+            foreach(Data d in dataList)
+                database.DeleteAsync(dataList);
+        }
+
         public Task<List<Data>> GetItemsAsync()
         {
             return database.Table<Data>().ToListAsync();
