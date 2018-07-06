@@ -1,6 +1,0 @@
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\bin\Debug\netstandard2.0\benchmark_json_xamarin.forms.deps.json
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\bin\Debug\netstandard2.0\benchmark_json_xamarin.forms.dll
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\obj\Debug\netstandard2.0\benchmark_json_xamarin.forms.csprojAssemblyReference.cache
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\obj\Debug\netstandard2.0\benchmark_json_xamarin.forms.csproj.CoreCompileInputs.cache
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\obj\Debug\netstandard2.0\benchmark_json_xamarin.forms.AssemblyInfoInputs.cache
-C:\Dev\ba-xamarin-android\benchmark_json\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\benchmark_json_xamarin.forms\obj\Debug\netstandard2.0\benchmark_json_xamarin.forms.AssemblyInfo.cs
