@@ -4,6 +4,7 @@ using bm_db_xam_forms.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -23,12 +24,12 @@ namespace bm_db_xam_forms.ViewModel
             AddDataToList();
         }
 
-        public async void LoadData()
+        public void LoadData()
         {
             var timer = new Stopwatch();
             timer.Start();
 
-            DataList = await database.GetItemsAsync();
+            DataList = database.GetItems();
 
             timer.Stop();
             Debug.WriteLine("Time: Load -> " + timer.Elapsed);
@@ -49,19 +50,21 @@ namespace bm_db_xam_forms.ViewModel
 
             timer.Stop();
             Debug.WriteLine("Time: Insert -> " + timer.Elapsed);
-            Debug.WriteLine("Time: Insert -> " + database.GetItemsAsync().Result.Count);
+            Debug.WriteLine("Time: Insert -> " + database.GetItems().Count);
         }
 
         public void DeleteData()
         {
+            var keysToDelete = DataList.Select(d => (object)d.ID);
+
             var timer = new Stopwatch();
             timer.Start();
 
-            database.DeleteItems(DataList);
+            database.DeleteItems(keysToDelete);
 
             timer.Stop();
             Debug.WriteLine("Time: Delete -> " + timer.Elapsed);
-            Debug.WriteLine("Time: Delete -> " + database.GetItemsAsync().Result.Count);
+            Debug.WriteLine("Time: Delete -> " + database.GetItems().Count);
 
             DataList.Clear();
             AddDataToList();
@@ -69,7 +72,7 @@ namespace bm_db_xam_forms.ViewModel
 
         void AddDataToList()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 DataList.Add(new Data());
             }

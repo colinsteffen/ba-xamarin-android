@@ -60,5 +60,15 @@ C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\bm_db
 C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\bin\Debug\bm_db_xam_android.dll.mdb
 C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\android\assets\bm_db_xam_android.dll.mdb
 C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\android\assets\SQLite-net.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\bin\Debug\System.Xml.Linq.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\bin\Debug\Microsoft.CSharp.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\System.Xml.Linq.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\Microsoft.CSharp.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\bin\Debug\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\android\assets\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\android\assets\Microsoft.CSharp.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\android\assets\System.Xml.Linq.pdb
 C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\bin\Debug\bm_db_xam_android.dll
 C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\bm_db_xam_android.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_platform\bm_db_xam_android\obj\Debug\linksrc\SQLiteNetExtensions.dll.mdb

@@ -36,9 +36,7 @@ class MainActivityViewModel(application: Application, private var database: Data
         val startTime = System.nanoTime();
 
         val job = launch {
-            for (d in dataList!!) {
-                database.dataDao().insert(d)
-            }
+            database.dataDao().insert(dataList!!)
         }
         job.join()
 
@@ -51,24 +49,24 @@ class MainActivityViewModel(application: Application, private var database: Data
         val startTime = System.nanoTime();
 
         val job = launch {
-            for (d in database.dataDao().all) {
-                database.dataDao().delete(d)
-            }
+                database.dataDao().delete(dataList!!)
         }
         job.join()
 
         val endTime = System.nanoTime();
         println("Time: Delete -> " + ((endTime - startTime) / 1000000))
-        println("Time: Delete -> " + database.dataDao().all.count())
+
+        val jobPrint = launch {
+            println("Time: Delete -> " + database.dataDao().all.count())
+        }
+        jobPrint.join()
 
         dataList!!.clear()
         addDataToList()
-
-        println("Delete erfolgreich.")
     }
 
     fun addDataToList(){
-        for(i in 1..1000)
+        for(i in 1..10000)
             dataList!!.add(Data())
     }
 }

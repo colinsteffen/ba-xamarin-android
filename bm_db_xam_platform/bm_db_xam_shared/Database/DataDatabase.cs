@@ -4,32 +4,44 @@ using System.Text;
 using System.Threading.Tasks;
 using bm_db_xam_shared.Model;
 using SQLite;
+using SQLiteNetExtensions.Extensions;
 
 namespace bm_db_xam_shared.Database
 {
     public class DataDatabase
     {
-        readonly SQLiteAsyncConnection database;
+        readonly SQLiteConnection con;
 
         public DataDatabase(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Data>().Wait();
+            con = new SQLiteConnection(dbPath);
+            con.CreateTable<Data>();
         }
 
         public void SaveItems(List<Data> dataList)
         {
-            database.InsertAllAsync(dataList).Wait();
+            Task.Run(() =>
+            {
+                con.InsertAll(dataList);
+            }).Wait();
         }
 
-        public void DeleteItems(List<Data> dataList)
+        public void DeleteItems(IEnumerable<object> keys)
         {
-            database.DeleteAsync(dataList).Wait();
+            Task.Run(() =>
+            {
+                con.DeleteAllIds<Data>(keys);
+            }).Wait();
         }
 
-        public Task<List<Data>> GetItemsAsync()
+        public List<Data> GetItems()
         {
-            return database.Table<Data>().ToListAsync();
+            List<Data> items = null;
+            Task.Run(() =>
+            {
+                items = con.Query<Data>("select * from Data");
+            }).Wait();
+            return items;
         }
     }
 }

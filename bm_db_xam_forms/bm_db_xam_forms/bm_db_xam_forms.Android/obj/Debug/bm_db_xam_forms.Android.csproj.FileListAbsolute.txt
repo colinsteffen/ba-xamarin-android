@@ -100,7 +100,15 @@ C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\bin\Debug\Microsoft.CSharp.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\Microsoft.CSharp.pdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\bin\Debug\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\android\assets\SQLiteNetExtensions.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\android\assets\Microsoft.CSharp.pdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\bin\Debug\bm_db_xam_forms.Android.dll
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\bm_db_xam_forms.pdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\bm_db_xam_forms.Android.dll.mdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
+C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\SQLiteNetExtensions.dll.mdb
 C:\Dev\ba-xam-droid\bm_db_xam_forms\bm_db_xam_forms\bm_db_xam_forms.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb

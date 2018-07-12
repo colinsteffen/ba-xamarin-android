@@ -13,8 +13,8 @@ interface DataDao {
     val all: MutableList<Data>
 
     @Insert
-    fun insert(data: Data)
+    fun insert(dataList: MutableList<Data>)
 
     @Delete
-    fun delete(data: Data)
+    fun delete(dataList: MutableList<Data>)
 }
