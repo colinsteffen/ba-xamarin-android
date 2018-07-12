@@ -12,7 +12,7 @@ namespace bm_db_xam_android
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
-        private MainActivityViewModel MainActivityController;
+        private MainActivityViewModel MainActivityVM;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -20,7 +20,7 @@ namespace bm_db_xam_android
 
             SetContentView(Resource.Layout.activity_main);
 
-            MainActivityController = new MainActivityViewModel();
+            MainActivityVM = new MainActivityViewModel();
 
 			Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -57,22 +57,22 @@ namespace bm_db_xam_android
 
         private void OnInsertClicked(object sender, EventArgs eventArgs)
         {
-            MainActivityController.InsertData();
+            MainActivityVM.InsertData();
         }
 
         private void OnResetClicked(object sender, EventArgs eventArgs)
         {
-            MainActivityController.ResetList();
+            MainActivityVM.ResetList();
         }
 
         private void OnLoadClicked(object sender, EventArgs eventArgs)
         {
-            MainActivityController.LoadData();
+            MainActivityVM.LoadData();
         }
 
         private void OnDeleteClicked(object sender, EventArgs eventArgs)
         {
-            MainActivityController.DeleteData();
+            MainActivityVM.DeleteData();
         }
     }
 }

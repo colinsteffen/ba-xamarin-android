@@ -18,9 +18,7 @@ public class MainActivityController {
         database = DataDatabase.getInstance(context);
         dataList = new ArrayList<Data>();
 
-        for(int i = 0; i < 1000; i++){
-            dataList.add(new Data());
-        }
+        addDataToList();
     }
 
     public void loadData(){
@@ -29,12 +27,12 @@ public class MainActivityController {
         dataList = database.dataDao().getAll();
 
         long endTime = System.nanoTime();
-        System.out.println("LoadTime:" + ((endTime - startTime) / 1000000));
-        System.out.println("LoadTime: Count -> " + dataList.size());
+        System.out.println("Time: Load -> " + ((endTime - startTime) / 1000000));
+        System.out.println("Time: Load -> " + dataList.size());
     }
 
     public void resetList(){
-        dataList = null;
+        dataList.clear();
     }
 
     public void insertData(){
@@ -43,9 +41,8 @@ public class MainActivityController {
         database.dataDao().insert(dataList);
 
         long endTime = System.nanoTime();
-        System.out.println("LoadTime:" + ((endTime - startTime) / 1000000));
-
-        System.out.println("LoadTime: Inserted -> " + database.dataDao().getAll().size());
+        System.out.println("Time: Insert -> " + ((endTime - startTime) / 1000000));
+        System.out.println("Time: Insert -> " + database.dataDao().getAll().size());
     }
 
     public void deleteData(){
@@ -56,13 +53,17 @@ public class MainActivityController {
         }
 
         long endTime = System.nanoTime();
-        System.out.println("DeleteTime:" + ((endTime - startTime) / 1000000));
+        System.out.println("Time: Delete -> " + ((endTime - startTime) / 1000000));
+        System.out.println("Time: Delete -> " + database.dataDao().getAll().size());
 
         dataList.clear();
+        addDataToList();
+    }
+
+    public void addDataToList()
+    {
         for(int i = 0; i < 1000; i++){
             dataList.add(new Data());
         }
-
-        System.out.println("Delete erfolgreich.");
     }
 }

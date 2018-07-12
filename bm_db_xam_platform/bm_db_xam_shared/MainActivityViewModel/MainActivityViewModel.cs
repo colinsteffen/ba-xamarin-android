@@ -59,8 +59,8 @@ namespace bm_db_xam_shared.ViewModel
             database.DeleteItems(DataList);
 
             timer.Stop();
-            Debug.WriteLine("Time: Insert -> " + timer.Elapsed);
-            Debug.WriteLine("Time: Insert -> " + database.GetItemsAsync().Result.Count);
+            Debug.WriteLine("Time: Delete -> " + timer.Elapsed);
+            Debug.WriteLine("Time: Delete -> " + database.GetItemsAsync().Result.Count);
 
             DataList.Clear();
             AddDataToList();

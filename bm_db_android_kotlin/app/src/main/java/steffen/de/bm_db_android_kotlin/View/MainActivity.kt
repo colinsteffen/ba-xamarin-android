@@ -2,9 +2,8 @@ package steffen.de.bm_db_android_kotlin.View
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
-import steffen.de.bm_db_android_kotlin.Controller.MainActivityController
+import steffen.de.bm_db_android_kotlin.ViewModel.MainActivityViewModel
 import steffen.de.bm_db_android_kotlin.R
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val controller = MainActivityController(this.getApplication())
+        val controller = MainActivityViewModel(this.getApplication())
 
         btn_insert.setOnClickListener{
             controller.insertData()

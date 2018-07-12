@@ -11,6 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Database\DataDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Data.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controller\MainActivityController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainActivityViewModel\MainActivityViewModel.cs" />
   </ItemGroup>
 </Project>
