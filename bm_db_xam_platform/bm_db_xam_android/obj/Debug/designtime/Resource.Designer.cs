@@ -24,10 +24,6 @@ namespace bm_db_xam_android
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-		}
-		
 		public partial class Animation
 		{
 			
@@ -2376,8 +2372,8 @@ namespace bm_db_xam_android
 			// aapt resource value: 0x7F0C0011
 			public const int action_mode_close_button = 2131492881;
 			
-			// aapt resource value: 0x7F010006
-			public const int action_settings = 2130771974;
+			// aapt resource value: 0x7F010007
+			public const int action_settings = 2130771975;
 			
 			// aapt resource value: 0x7F0C0004
 			public const int action_text = 2131492868;
@@ -2402,6 +2398,9 @@ namespace bm_db_xam_android
 			
 			// aapt resource value: 0x7F0C001A
 			public const int bottom = 2131492890;
+			
+			// aapt resource value: 0x7F010006
+			public const int btn_delete = 2130771974;
 			
 			// aapt resource value: 0x7F010003
 			public const int btn_insert = 2130771971;

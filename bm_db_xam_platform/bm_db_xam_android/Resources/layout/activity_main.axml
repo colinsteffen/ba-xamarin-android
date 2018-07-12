@@ -35,5 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="load" />
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

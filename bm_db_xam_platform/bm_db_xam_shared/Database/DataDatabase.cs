@@ -17,16 +17,14 @@ namespace bm_db_xam_shared.Database
             database.CreateTableAsync<Data>().Wait();
         }
 
-        public Task<int> SaveItemAsync(Data data)
+        public void SaveItems(List<Data> dataList)
         {
-            if (data.ID != 0)
-            {
-                return database.UpdateAsync(data);
-            }
-            else
-            {
-                return database.InsertAsync(data);
-            }
+            database.InsertAllAsync(dataList).Wait();
+        }
+
+        public void DeleteItems(List<Data> dataList)
+        {
+            database.DeleteAsync(dataList).Wait();
         }
 
         public Task<List<Data>> GetItemsAsync()

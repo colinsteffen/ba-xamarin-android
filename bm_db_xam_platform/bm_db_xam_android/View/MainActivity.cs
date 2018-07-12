@@ -5,14 +5,14 @@ using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
-using bm_db_xam_shared.Controller;
+using bm_db_xam_shared.ViewModel;
 
 namespace bm_db_xam_android
 {
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
-        private MainActivityController MainActivityController;
+        private MainActivityViewModel MainActivityController;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -20,7 +20,7 @@ namespace bm_db_xam_android
 
             SetContentView(Resource.Layout.activity_main);
 
-            MainActivityController = new MainActivityController();
+            MainActivityController = new MainActivityViewModel();
 
 			Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -33,6 +33,9 @@ namespace bm_db_xam_android
 
             Button loadBtn = FindViewById<Button>(Resource.Id.btn_load);
             loadBtn.Click += OnLoadClicked;
+
+            Button deleteBtn = FindViewById<Button>(Resource.Id.btn_delete);
+            deleteBtn.Click += OnDeleteClicked;
         }
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
@@ -65,6 +68,11 @@ namespace bm_db_xam_android
         private void OnLoadClicked(object sender, EventArgs eventArgs)
         {
             MainActivityController.LoadData();
+        }
+
+        private void OnDeleteClicked(object sender, EventArgs eventArgs)
+        {
+            MainActivityController.DeleteData();
         }
     }
 }

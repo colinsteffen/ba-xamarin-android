@@ -24,8 +24,7 @@ namespace bm_db_xam_forms.Database
 
         public void DeleteItems(List<Data> dataList)
         {
-            foreach(Data d in dataList)
-                database.DeleteAsync(dataList);
+            database.DeleteAsync(dataList).Wait();
         }
 
         public Task<List<Data>> GetItemsAsync()
