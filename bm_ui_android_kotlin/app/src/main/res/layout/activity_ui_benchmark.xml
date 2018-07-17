@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:binding="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -11,17 +13,21 @@
 
         <ImageView
             android:id="@+id/imageTest"
-            android:layout_width="50dip"
-            android:layout_height="fill_parent"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
             android:src="@drawable/xamarin_test"
             android:layout_margin="3dip"
-            android:scaleType="center"/>
+            android:layout_gravity="center"/>
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ListView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/listview_ui_benchmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dip"/>
+            android:layout_marginTop="3dip"
+            binding:itemSource="InformationList"
+            binding:itemTemplate="@lay"
+            />
 
 
     </LinearLayout>
