@@ -19,7 +19,7 @@ public class UIBenchmarkViewModel extends ViewModel {
 
     public UIBenchmarkViewModel(){
 
-        for(int i = 0; i < 500; i++){
+        for(int i = 0; i < 1000; i++){
             InformationItems.add(new Information("Paderborn", "Bielefeld"));
         }
 

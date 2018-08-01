@@ -24,11 +24,7 @@
             android:id="@+id/listview_ui_benchmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dip"
-            binding:itemSource="InformationList"
-            binding:itemTemplate="@lay"
-            />
-
+            android:layout_marginTop="3dip"/>
 
     </LinearLayout>
 
