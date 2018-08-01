@@ -12,22 +12,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val controller = MainActivityViewModel(this.getApplication())
+        val viewModel = MainActivityViewModel(this.getApplication())
 
         btn_insert.setOnClickListener{
-            controller.insertData()
+            viewModel.insertData()
         }
 
         btn_reset.setOnClickListener{
-            controller.resetList()
+            viewModel.resetList()
         }
 
         btn_load.setOnClickListener{
-            controller.loadData()
+            viewModel.loadData()
         }
 
         btn_delete.setOnClickListener{
-            controller.deleteData()
+            viewModel.deleteData()
         }
 
     }
