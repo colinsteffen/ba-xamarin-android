@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:bm_json_xam_forms"
+             x:Class="bm_json_xam_forms.MainPage">
+
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center">
+
+        <Button Text="Serialize"
+                Clicked="OnSerializedClicked"
+                WidthRequest="200"
+                HeightRequest="50"/>
+
+        <Button Text="Deserialize"
+                Clicked="OnDeserializedClicked"
+                WidthRequest="200"
+                HeightRequest="50"/>
+
+    </StackLayout>
+
+</ContentPage>
