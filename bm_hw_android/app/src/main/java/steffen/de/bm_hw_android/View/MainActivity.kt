@@ -1,7 +1,8 @@
-package steffen.de.bm_hw_android
+package steffen.de.bm_hw_android.View
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import steffen.de.bm_hw_android.R
 
 class MainActivity : AppCompatActivity() {
 
