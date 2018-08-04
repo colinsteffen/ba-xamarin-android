@@ -8,7 +8,7 @@
         android:id="@+id/image"
         android:layout_width="300dip"
         android:layout_height="300dip"
-        android:src="@mipmap/XamarinTest"
+        android:src="@drawable/XamarinTest"
         android:layout_margin="3dip" />
     <ListView
         android:id="@+id/listview_ui_benchmark"

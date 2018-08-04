@@ -25,9 +25,9 @@ public class UIBenchmarkActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        long startTime = System.nanoTime();
-
         uIBenchmarkViewModel = new UIBenchmarkViewModel();
+
+        long startTime = System.nanoTime();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ui_benchmark);

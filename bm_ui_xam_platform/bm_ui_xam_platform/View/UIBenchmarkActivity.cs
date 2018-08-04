@@ -24,10 +24,10 @@ namespace bm_ui_xam_platform.View
         ListView InformationListView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            UIBenchmarkViewModel = new UIBenchmarkViewModel();
+
             var timer = new Stopwatch();
             timer.Start();
-
-            UIBenchmarkViewModel = new UIBenchmarkViewModel();
 
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.actvity_ui_benchmark);
