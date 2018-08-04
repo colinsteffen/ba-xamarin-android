@@ -4,11 +4,10 @@
              xmlns:local="clr-namespace:bm_ui_xam_forms"
              x:Class="bm_ui_xam_forms.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Button Text="Open"
+                Clicked="OnOpenClicked"/>
     </StackLayout>
 
 </ContentPage>

@@ -156,4 +156,7 @@
       <Name>bm_ui_xam_forms</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\XamarinTest.png" />
+  </ItemGroup>
 </Project>

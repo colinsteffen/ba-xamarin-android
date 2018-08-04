@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bm_ui_xam_forms.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,10 @@ namespace bm_ui_xam_forms
 		{
 			InitializeComponent();
 		}
-	}
+
+        void OnOpenClicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new UIBenchmarkPage());
+        }
+    }
 }

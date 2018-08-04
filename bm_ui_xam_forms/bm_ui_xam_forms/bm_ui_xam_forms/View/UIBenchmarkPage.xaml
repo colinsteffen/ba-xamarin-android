@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bm_ui_xam_forms.View.UIBenchmarkPage">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+
+            <Image HorizontalOptions="Center"
+               Source="XamarinTest.png"
+               HeightRequest="300"
+               WidthRequest="300"/>
+
+            <ListView x:Name="informationLV"
+                      ItemsSource="{Binding InformationItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Start}" 
+                                  Detail="{Binding End}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
