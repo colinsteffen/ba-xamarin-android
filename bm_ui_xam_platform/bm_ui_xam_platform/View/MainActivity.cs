@@ -7,10 +7,11 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Content;
 using bm_ui_xam_platform.View;
+using Android.Content.PM;
 
 namespace bm_ui_xam_platform
 {
-	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, WindowSoftInputMode = SoftInput.AdjustResize)]
 	public class MainActivity : AppCompatActivity
 	{
 

@@ -379,8 +379,7 @@ namespace bm_ui_xam_platform
 			public const int colorControlNormal = 2130772114;
 			
 			// aapt resource value: 0x7f0100b1
-			public const int color
-                = 2130772145;
+			public const int colorError = 2130772145;
 			
 			// aapt resource value: 0x7f01008f
 			public const int colorPrimary = 2130772111;
@@ -3155,7 +3154,7 @@ namespace bm_ui_xam_platform
 			public const int ic_launcher_round = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int xamarin_test = 2130903043;
+			public const int xamarinTest = 2130903043;
 			
 			static Mipmap()
 			{
