@@ -4,16 +4,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal">
-    <Button
-        android:id="@+id/btn_open_activity"
-        android:layout_width="wrap_content"
+    <TextView
+        android:text="Hello World!"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="open" />
-    <Button
-        android:id="@+id/btn_open_activity2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="open2" />
+        android:layout_gravity="center" />
 </LinearLayout>

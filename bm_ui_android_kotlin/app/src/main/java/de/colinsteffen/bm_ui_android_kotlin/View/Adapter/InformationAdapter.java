@@ -15,48 +15,26 @@ import java.util.List;
 import de.colinsteffen.bm_ui_android_kotlin.Model.Information;
 import de.colinsteffen.bm_ui_android_kotlin.R;
 
-public class InformationAdapter extends BaseAdapter {
-
-    private Context context;
-    private ArrayList<Information> informationList;
+public class InformationAdapter extends ArrayAdapter<Information> {
 
     public InformationAdapter(Context context, ArrayList<Information> informationList){
-        this.informationList = informationList;
-        this.context = context;
+        super(context, 0, informationList);
     }
 
     @Override
-    public int getCount() {
-        return informationList.size();
-    }
 
-    @Override
-    public Object getItem(int position) {
-        return informationList.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        TwoLineListItem twoLineListItem;
+        Information information = getItem(position);
 
-        if(convertView == null){
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            twoLineListItem = (TwoLineListItem) inflater.inflate(android.R.layout.simple_list_item_2, null);
-        } else {
-            twoLineListItem = (TwoLineListItem) convertView;
-        }
+        if (convertView == null)
+            convertView = LayoutInflater.from(getContext()).inflate(android.R.layout.simple_list_item_2, parent, false);
 
-        TextView text1 = twoLineListItem.getText1();
-        TextView text2 = twoLineListItem.getText2();
+        TextView tvStart = (TextView) convertView.findViewById(android.R.id.text1);
+        TextView tvEnd = (TextView) convertView.findViewById(android.R.id.text2);
 
-        text1.setText("Start: " + informationList.get(position).getStart());
-        text2.setText("End: " + informationList.get(position).getEnd());
+        tvStart.setText(information.getStart());
+        tvEnd.setText(information.getEnd());
 
-        return twoLineListItem;
+        return convertView;
     }
 }

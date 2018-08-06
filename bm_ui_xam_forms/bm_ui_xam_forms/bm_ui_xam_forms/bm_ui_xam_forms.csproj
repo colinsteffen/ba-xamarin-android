@@ -9,6 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\UIBenchmarkPage2.xaml.cs">
+      <DependentUpon>UIBenchmarkPage2.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\UIBenchmarkPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

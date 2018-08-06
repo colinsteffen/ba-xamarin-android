@@ -23,11 +23,20 @@ namespace bm_ui_xam_platform
 
 			Button btn = FindViewById<Button>(Resource.Id.btn_open_activity);
             btn.Click += OpenActivity;
-		}
+
+            Button btn2 = FindViewById<Button>(Resource.Id.btn_open_activity2);
+            btn2.Click += OpenActivity2;
+        }
 
         private void OpenActivity(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(UIBenchmarkActivity));
+            StartActivity(intent);
+        }
+
+        private void OpenActivity2(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(UIBenchmarkActivity2));
             StartActivity(intent);
         }
 

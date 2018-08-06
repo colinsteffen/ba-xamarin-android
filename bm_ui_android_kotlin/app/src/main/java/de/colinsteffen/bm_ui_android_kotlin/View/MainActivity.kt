@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this@MainActivity, UIBenchmarkActivity::class.java)
             this@MainActivity.startActivity(myIntent)
         }
+
+        btn_open_activity2.setOnClickListener {
+            val myIntent = Intent(this@MainActivity, UIBenchmarkActivity2::class.java)
+            this@MainActivity.startActivity(myIntent)
+        }
     }
 }

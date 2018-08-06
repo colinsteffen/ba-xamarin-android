@@ -15,24 +15,16 @@ using Shared.ViewModel;
 
 namespace bm_ui_xam_platform.View
 {
-    [Activity(Label = "UIBenchmarkActivity", NoHistory = true)]
-    public class UIBenchmarkActivity : AppCompatActivity
+    [Activity(Label = "UIBenchmarkActivity2", NoHistory = true)]
+    public class UIBenchmarkActivity2 : AppCompatActivity
     {
-        UIBenchmarkViewModel UIBenchmarkViewModel;
-
-        ListView InformationListView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            UIBenchmarkViewModel = new UIBenchmarkViewModel();
-
             var timer = new Stopwatch();
             timer.Start();
 
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.actvity_ui_benchmark);
-
-            InformationListView = FindViewById<ListView>(Resource.Id.listview_ui_benchmark);
-            InformationListView.Adapter = new InformationAdapter(UIBenchmarkViewModel.InformationItems);
+            SetContentView(Resource.Layout.actvity_ui_benchmark2);
 
             timer.Stop();
             System.Diagnostics.Debug.WriteLine("Time: Load -> " + timer.Elapsed);

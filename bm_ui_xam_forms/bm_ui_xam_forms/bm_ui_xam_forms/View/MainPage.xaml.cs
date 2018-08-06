@@ -19,5 +19,10 @@ namespace bm_ui_xam_forms
         {
             Navigation.PushModalAsync(new UIBenchmarkPage());
         }
+
+        void OnOpen2Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new UIBenchmarkPage2());
+        }
     }
 }

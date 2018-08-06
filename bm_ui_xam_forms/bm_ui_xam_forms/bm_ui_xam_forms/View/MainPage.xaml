@@ -6,8 +6,12 @@
 
     <StackLayout HorizontalOptions="Center"
                  VerticalOptions="Center">
+        
         <Button Text="Open"
                 Clicked="OnOpenClicked"/>
+        <Button Text="Open2"
+                Clicked="OnOpen2Clicked"/>
+
     </StackLayout>
 
 </ContentPage>
