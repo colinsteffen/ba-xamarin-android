@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace bm_rest_webapi.Models
+namespace bm_rest_xam_forms.Model
 {
     public class Person
     {
+
         public String Nachname { get; set; }
         public String Vorname { get; set; }
         public int Alter { get; set; }
@@ -17,5 +17,6 @@ namespace bm_rest_webapi.Models
             this.Vorname = vorname;
             this.Alter = alter;
         }
+
     }
 }
