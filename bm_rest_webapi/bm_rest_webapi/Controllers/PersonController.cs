@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using bm_rest_webapi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TodoApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/person")]
     [ApiController]
-    public class TodoController : ControllerBase
+    public class PersonController : ControllerBase
     {
         private List<Person> personen;
 
-        public TodoController()
+        public PersonController()
         {
             personen = new List<Person>();
 
@@ -25,6 +26,13 @@ namespace TodoApi.Controllers
         public ActionResult<List<Person>> GetAll()
         {
             return personen;
+        }
+
+        [HttpPost]
+        public IActionResult InsertPersonen(List<Person> pn)
+        {
+            this.personen = pn;
+            return Ok(true);
         }
     }
 }

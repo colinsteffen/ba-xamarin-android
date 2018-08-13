@@ -73,9 +73,7 @@ namespace bm_db_xam_forms.ViewModel
         void AddDataToList()
         {
             for (int i = 0; i < 10000; i++)
-            {
                 DataList.Add(new Data());
-            }
         }
 
     }
