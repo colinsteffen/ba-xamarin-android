@@ -12,7 +12,7 @@ namespace bm_rest_xam_forms.Services
 {
     public class RestService
     {
-        string serveradresse = "http:localhost:44301/api/";
+        string serveradresse = "https://192.168.43.181:44301/api/person";
 
         public RestService()
         {
@@ -24,7 +24,7 @@ namespace bm_rest_xam_forms.Services
             timer.Start();
 
             var client = new RestClient();
-            var uri = new Uri(serveradresse + "person");
+            var uri = new Uri(serveradresse);
             var request = new RestRequest(Method.GET);
 
             request.AddHeader("content-type", "application/json");

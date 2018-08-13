@@ -8,7 +8,7 @@
                  HorizontalOptions="Center">
 
         <Button Text="Get"
-                Clicked="OGetClicked"
+                Clicked="OnGetClicked"
                 WidthRequest="200"
                 HeightRequest="50"/>
 

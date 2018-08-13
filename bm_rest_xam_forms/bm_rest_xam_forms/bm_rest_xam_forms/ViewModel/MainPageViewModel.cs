@@ -14,7 +14,7 @@ namespace bm_rest_xam_forms.ViewModel
 
         public MainPageViewModel()
         {
-
+            restService = new RestService();
         }
 
         public void GetPersons()

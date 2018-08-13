@@ -13,6 +13,7 @@ namespace bm_rest_xam_forms
         private MainPageViewModel MainPageVM;
 		public MainPage()
 		{
+            MainPageVM = new MainPageViewModel();
 			InitializeComponent();
 		}
 
