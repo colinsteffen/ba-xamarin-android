@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Content;
 using bm_ui_xam_platform.View;
 using Android.Content.PM;
+using Shared.Helper;
 
 namespace bm_ui_xam_platform
 {
@@ -30,12 +31,16 @@ namespace bm_ui_xam_platform
 
         private void OpenActivity(object sender, EventArgs e)
         {
+            TimeHelper.SetStartTime();
+
             var intent = new Intent(this, typeof(UIBenchmarkActivity));
             StartActivity(intent);
         }
 
         private void OpenActivity2(object sender, EventArgs e)
         {
+            TimeHelper.SetStartTime();
+
             var intent = new Intent(this, typeof(UIBenchmarkActivity2));
             StartActivity(intent);
         }

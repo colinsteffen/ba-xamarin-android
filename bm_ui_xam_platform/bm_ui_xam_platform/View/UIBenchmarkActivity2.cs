@@ -12,6 +12,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Shared.ViewModel;
+using Shared.Helper;
 
 namespace bm_ui_xam_platform.View
 {
@@ -20,14 +21,15 @@ namespace bm_ui_xam_platform.View
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            var timer = new Stopwatch();
-            timer.Start();
-
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.actvity_ui_benchmark2);
+        }
 
-            timer.Stop();
-            System.Diagnostics.Debug.WriteLine("Time: Load -> " + timer.Elapsed);
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            TimeHelper.SetEndTime();
         }
     }
 }

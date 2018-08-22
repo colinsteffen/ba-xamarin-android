@@ -12,6 +12,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Shared.ViewModel;
+using Shared.Helper;
 
 namespace bm_ui_xam_platform.View
 {
@@ -25,17 +26,18 @@ namespace bm_ui_xam_platform.View
         {
             UIBenchmarkViewModel = new UIBenchmarkViewModel();
 
-            var timer = new Stopwatch();
-            timer.Start();
-
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.actvity_ui_benchmark);
 
             InformationListView = FindViewById<ListView>(Resource.Id.listview_ui_benchmark);
             InformationListView.Adapter = new InformationAdapter(UIBenchmarkViewModel.InformationItems);
+        }
 
-            timer.Stop();
-            System.Diagnostics.Debug.WriteLine("Time: Load -> " + timer.Elapsed);
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            TimeHelper.SetEndTime();
         }
     }
 }

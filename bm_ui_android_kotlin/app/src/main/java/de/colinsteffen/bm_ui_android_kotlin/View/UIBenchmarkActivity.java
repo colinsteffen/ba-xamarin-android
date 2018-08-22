@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import de.colinsteffen.bm_ui_android_kotlin.Helper.TimeHelper;
 import de.colinsteffen.bm_ui_android_kotlin.Model.Information;
 import de.colinsteffen.bm_ui_android_kotlin.R;
 import de.colinsteffen.bm_ui_android_kotlin.View.Adapter.InformationAdapter;
@@ -27,16 +28,17 @@ public class UIBenchmarkActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         uIBenchmarkViewModel = new UIBenchmarkViewModel();
 
-        long startTime = System.nanoTime();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ui_benchmark);
 
         informationLV = findViewById(R.id.listview_ui_benchmark);
         informationLV.setAdapter(new InformationAdapter(this, uIBenchmarkViewModel.InformationItems));
+    }
 
-        long endTime = System.nanoTime();
-        long time = (endTime - startTime) / 1000000;
-        Log.d("Time: End -> ", String.valueOf(time));
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        TimeHelper.setEndTime();
     }
 }

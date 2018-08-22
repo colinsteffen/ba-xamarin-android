@@ -1,4 +1,5 @@
-﻿using bm_ui_xam_forms.ViewModel;
+﻿using bm_ui_xam_forms.Helper;
+using bm_ui_xam_forms.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,14 +20,15 @@ namespace bm_ui_xam_forms.View
 		{
             uIBenchmarkMV = new UIBenchmarkViewModel();
 
-            var timer = new Stopwatch();
-            timer.Start();
-
             InitializeComponent();
             BindingContext = uIBenchmarkMV;
-
-            timer.Stop();
-            Debug.WriteLine("Time: Load -> " + timer.Elapsed);
 		}
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            TimeHelper.SetEndTime();
+        }
+    }
 }
