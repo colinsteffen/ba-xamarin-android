@@ -21,9 +21,6 @@ namespace bm_json_xam_android
 
             MainActivityVM = new MainActivityViewModel();
 
-			Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-
             Button serializeBtn = FindViewById<Button>(Resource.Id.btn_serialize);
             serializeBtn.Click += OnSerializedClicked;
 
