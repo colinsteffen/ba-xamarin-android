@@ -19,6 +19,7 @@ namespace bm_rest_webapi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseUrls("http://172.20.10.3:5000/");
     }
 }
