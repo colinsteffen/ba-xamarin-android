@@ -12,33 +12,34 @@ namespace bm_rest_xam_forms.Services
 {
     public class RestService
     {
-        string serveradresse = "https://192.168.43.181:44301/api/person";
+        string serveradresse = "http://172.20.10.3:5000/api/person/";
+        HttpClient client;
 
         public RestService()
         {
+            client = new HttpClient();
+            client.MaxResponseContentBufferSize = 256000;
         }
 
-        public string GetPersonsJson()
+        public async Task<string> GetPersonsJson()
         {
             var timer = new Stopwatch();
             timer.Start();
 
-            var client = new RestClient();
-            var uri = new Uri(serveradresse);
-            var request = new RestRequest(Method.GET);
+            var uri = new Uri(string.Format(serveradresse));
 
-            request.AddHeader("content-type", "application/json");
-            request.RequestFormat = DataFormat.Json;
+            HttpResponseMessage response = await client.GetAsync(uri);
 
-            IRestResponse response = client.Execute(request);
+            if (response.IsSuccessStatusCode)
+            {
+                timer.Stop();
+                Debug.WriteLine("Time: Get -> " + timer.Elapsed);
 
-            timer.Stop();
-            Debug.WriteLine("Time: Serialization -> " + timer.Elapsed);
+                string answer = await response.Content.ReadAsStringAsync();
+                return answer;
+            }
 
-            string answer = response.Content.ToString();
-            Debug.WriteLine("Content:" + answer);
-
-            return answer;
+            return "";
         }
 
         public async Task<bool> PostPersons(string personsJson)
@@ -46,8 +47,7 @@ namespace bm_rest_xam_forms.Services
             var timer = new Stopwatch();
             timer.Start();
 
-            var client = new HttpClient();
-            var uri = new Uri(serveradresse + "person");
+            var uri = new Uri(string.Format(serveradresse));
 
             var content = new StringContent(personsJson, Encoding.UTF8, "application/json");
 
@@ -56,7 +56,7 @@ namespace bm_rest_xam_forms.Services
             if(response.IsSuccessStatusCode)
             {
                 timer.Stop();
-                Debug.WriteLine("Time: Serialization -> " + timer.Elapsed);
+                Debug.WriteLine("Time: Post -> " + timer.Elapsed);
                 return true;
             }
 
